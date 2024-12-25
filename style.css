@@ -828,7 +828,7 @@ button:active {
 /* Responsive Header */
 @media screen and (max-width: 768px) {
     #container3d {
-        display: none;
+        position: absolute;
     }
 
     header {
@@ -866,7 +866,7 @@ button:active {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
     #container3d {
         position: absolute;
     }
