@@ -16,7 +16,7 @@ camera.position.z = 10;
 const scene = new THREE.Scene();
 const loader = new GLTFLoader();
 let key;
-loader.load('/Model/scene.gltf',
+loader.load('Model/scene.gltf',
     function (gltf) {
         key = gltf.scene;
         scene.add(key);
