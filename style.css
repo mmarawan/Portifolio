@@ -5,6 +5,28 @@
     src: url('Fonts/Font.woff2') format('woff2');
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scrollbar */
+    padding: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffd1;
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners for the track */
+    border: 1px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a1fd51;
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    border: 1px solid #000;
+    /* Rounded corners for the thumb */
+}
+
 .loader-wrapper {
     position: fixed;
     top: 0;
@@ -312,6 +334,32 @@ nav.active {
     letter-spacing: 0.5px;
     margin-left: 40px;
     /* Add left margin for spacing from the edge */
+}
+
+#about p::-webkit-scrollbar {
+    width: 6px;
+    /* Thinner scrollbar for paragraph */
+}
+
+#about p::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#about p::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+    min-height: 30px;
+}
+
+#about p::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Firefox */
+#about p {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
 }
 
 #about span {
@@ -872,18 +920,15 @@ button:active {
     }
 }
 
-/* Banner Section */
-@media screen and (max-width: 768px) {
-    #banner h1 {
-        font-size: 2.5rem;
-    }
-}
-
 /* About Section */
 @media screen and (max-width: 768px) {
     #about p {
         font-size: 1rem;
         padding: 0 15px;
+        max-height: 400px;
+        /* Set a maximum height to enable scrolling */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
     }
 }
 
